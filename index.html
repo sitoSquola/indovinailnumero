@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/css.css" type="text/css">
+<script type="text/javascript" src="js/javascript.js"></script>
+</head>
+<body>
+<div id="home" class="home">
+<h3>Benvenuto a Indovina il numero</h3>
+<p>Per vincere dovrai indovinare un numero da 0 a 100, si ha un massimo di 15 tentativi</p>
+<p>premi il pulsante per proseguire</p>
+<button class="start" type="submit" onclick="inizio()">Start!</button>
+</div>
+
+<div id="gioco" class="gioco">
+    <p id="tentativi" class="tentativi"></p>
+    <p>Inserisci un numero compreso tra 0 e 100 e premere il tasto conferma per confermare</p>
+    <input id=input type=number required>
+    <p id="risposta"></p>
+    <button class="invio" type="submit" onclick="conferma()">Conferma</button>
+    <p id="count" class="count"></p>
+</div>
+
+<div id="complimenti" class="complimenti">
+    <h1>WOW sei op, hai indovinato</h1>
+    <p id="info">Ci hai messo </p>
+    <button class="another" type="submit" onclick="retry()">Retry</button>
+</div>
+
+<div id="game_over" class="game_over">
+    <h1>GAME OVER</h1>
+    <p>Il tempo e' scaduto e hai fallito</p>
+    <button class="another" type="submit" onclick="retry()">Retry</button>
+</div>
+<script>
+document.getElementById('gioco').style.display = "none"
+document.getElementById('complimenti').style.display = "none"
+document.getElementById('game_over').style.display = "none"
+</script>
+</body>
+</html>
